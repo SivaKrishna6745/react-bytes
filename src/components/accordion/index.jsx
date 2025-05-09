@@ -27,46 +27,37 @@ const Accordion = () => {
                         setMultiple([]);
                     }}
                 >
-                    {enableMultiSelection ? 'Enable Single Selection' : 'Enable Multi Selection'}
+                    {enableMultiSelection ? 'Switch to Single Selection' : 'Switch to Multi Selection'}
                 </button>
                 {data && data.length > 0 ? (
-                    data.map((dataItem) => (
-                        <div
-                            className="item m-10 p-5 rounded-lg text-xl bg-gray-700/50 text-gray-900 shadow-md"
-                            key={dataItem.id}
-                        >
+                    data.map((dataItem) => {
+                        const isSelected = selected === dataItem.id || multiple.indexOf(dataItem.id) !== -1;
+                        return (
                             <div
-                                className="question flex flex-row cursor-pointer"
-                                onClick={
-                                    enableMultiSelection
-                                        ? () => handleMultiSelection(dataItem.id)
-                                        : () => handleSingleSelection(dataItem.id)
-                                }
+                                className="item m-10 p-5 rounded-lg text-xl bg-gray-700/50 text-gray-900 shadow-md"
+                                key={dataItem.id}
                             >
-                                <h3 className="flex-auto flex items-center">{dataItem.question}</h3>
-                                <span className="flex items-center justify-center">
-                                    <box-icon
-                                        name={
-                                            selected === dataItem.id || multiple.indexOf(dataItem.id) !== -1
-                                                ? 'chevron-down'
-                                                : 'chevron-right'
-                                        }
-                                    ></box-icon>
-                                </span>
-                            </div>
-                            {selected === dataItem.id || multiple.indexOf(dataItem.id) !== -1 ? (
                                 <div
-                                    className={`answer mt-5 overflow-hidden transition-all duration-1000 ${
-                                        selected === dataItem.id || multiple.indexOf(dataItem.id) !== -1
-                                            ? 'opacity-100'
-                                            : 'opacity-0'
-                                    }`}
+                                    className="question flex flex-row cursor-pointer"
+                                    onClick={
+                                        enableMultiSelection
+                                            ? () => handleMultiSelection(dataItem.id)
+                                            : () => handleSingleSelection(dataItem.id)
+                                    }
                                 >
-                                    <p>{dataItem.answer}</p>
+                                    <h3 className="flex-auto flex items-center">{dataItem.question}</h3>
+                                    <span className="flex items-center justify-center">
+                                        <box-icon name={isSelected ? 'chevron-down' : 'chevron-right'}></box-icon>
+                                    </span>
                                 </div>
-                            ) : null}
-                        </div>
-                    ))
+                                {isSelected ? (
+                                    <div className={`answer mt-5 block`}>
+                                        <p>{dataItem.answer}</p>
+                                    </div>
+                                ) : null}
+                            </div>
+                        );
+                    })
                 ) : (
                     <div>No data Found!</div>
                 )}
