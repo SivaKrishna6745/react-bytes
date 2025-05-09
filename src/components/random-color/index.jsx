@@ -29,13 +29,6 @@ const RandomColor = () => {
                 Random Color Component Demo
             </h2>
             <div className="flex justify-center items-center flex-col gap-5">
-                {/* <button
-                    type="button"
-                    className="block px-6 py-3 bg-red-400 rounded-lg mr-5 text-white cursor-pointer"
-                    onClick={() => setTypeOfColor(`${typeOfColor === 'hex' ? 'rgb' : 'hex'}`)}
-                >
-                    {`Switch to ${typeOfColor === 'hex' ? 'RGB' : 'HEX'} color`}
-                </button> */}
                 <div className="flex flex-row gap-5">
                     <div className="flex gap-2 items-center text-white" style={{ textShadow: textShadow }}>
                         <input
@@ -66,7 +59,7 @@ const RandomColor = () => {
                 </div>
                 <button
                     type="button"
-                    className="block px-6 py-3 bg-blue-400 rounded-lg mr-5 text-white cursor-pointer"
+                    className="block px-6 py-3 bg-blue-400 rounded-lg text-white cursor-pointer"
                     onClick={handleRandomColor}
                 >
                     Generate Random Color
