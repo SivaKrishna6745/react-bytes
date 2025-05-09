@@ -1,8 +1,17 @@
 import React from 'react';
 import Accordion from './components/accordion';
+import RandomColor from './components/random-color';
 
 const App = () => {
-    return <Accordion />;
+    return (
+        <div>
+            <h1 className="uppercase text-5xl text-center bg-purple-400 text-white p-5">React Bytes</h1>
+            {/* accordion component */}
+            <Accordion />
+            {/* random color component */}
+            <RandomColor />
+        </div>
+    );
 };
 
 export default App;
