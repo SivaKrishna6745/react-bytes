@@ -18,7 +18,7 @@ const Accordion = () => {
     return (
         <div className="wrapper min-h-screen bg-gradient-to-r from-teal-300 to-indigo-300 overflow-hidden">
             <div className="accordion mt-10 mx-5">
-                <h1 className="text-4xl text-center my-5">Accordion with Single Selection and Mutli Selection Demo</h1>
+                <h2 className="text-4xl text-center my-5">Accordion with Single Selection and Mutli Selection Demo</h2>
                 <button
                     className="mx-auto block px-6 py-3 bg-blue-500 text-white rounded-lg text-lg cursor-pointer"
                     onClick={() => {
