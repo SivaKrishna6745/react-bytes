@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const StarRating = ({ noOfStars = 5 }) => {
-    const stars = 0;
+    const [rating, setRating] = useState(0);
+    const [hoverIndex, setHoverIndex] = useState(0);
     return (
-        <div className="container">{...Array.from({ length: noOfStars }, () => <box-icon name="star"></box-icon>)}</div>
+        <div className="wrapper p-5 bg-amber-400">
+            <h2 className="text-4xl text-center my-5 text-white">Star Rating Demo</h2>
+            <div className="container flex justify-center gap-1 max-w-full">
+                {...Array.from({ length: noOfStars }, (_, index) => (
+                    <box-icon
+                        key={index}
+                        onMouseOver={() => setHoverIndex(index)}
+                        omMouseLeave={() => setHoverIndex(null)}
+                        onClick={() => setRating(index)}
+                        name="star"
+                        type={hoverIndex >= index ? 'solid' : 'regular'}
+                        className="cursor-pointer"
+                    ></box-icon>
+                ))}
+            </div>
+        </div>
     );
 };
 
