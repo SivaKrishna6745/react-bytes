@@ -1,6 +1,7 @@
 import React from 'react';
 import Accordion from './components/accordion';
 import RandomColor from './components/random-color';
+import StarRating from './components/star-rating';
 
 const App = () => {
     return (
@@ -10,6 +11,8 @@ const App = () => {
             <Accordion />
             {/* random color component */}
             <RandomColor />
+            {/* star rating component */}
+            <StarRating />
         </div>
     );
 };
