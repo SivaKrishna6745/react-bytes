@@ -2,6 +2,7 @@ import React from 'react';
 import Accordion from './components/accordion';
 import RandomColor from './components/random-color';
 import StarRating from './components/star-rating';
+import ImageSlider from './components/image-slider';
 
 const App = () => {
     return (
@@ -13,6 +14,8 @@ const App = () => {
             <RandomColor />
             {/* star rating component */}
             <StarRating />
+            {/* image slider component */}
+            <ImageSlider />
         </div>
     );
 };
