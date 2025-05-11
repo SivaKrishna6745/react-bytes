@@ -13,7 +13,7 @@ const App = () => {
             {/* random color component */}
             <RandomColor />
             {/* star rating component */}
-            <StarRating />
+            <StarRating noOfStars={10} />
             {/* image slider component */}
             <ImageSlider />
         </div>
