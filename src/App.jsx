@@ -15,7 +15,7 @@ const App = () => {
             {/* star rating component */}
             <StarRating noOfStars={10} />
             {/* image slider component */}
-            <ImageSlider />
+            <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} />
         </div>
     );
 };
