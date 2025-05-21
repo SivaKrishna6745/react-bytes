@@ -13,7 +13,6 @@ const Accordion = () => {
             prevState.includes(currId) ? prevState.filter((item) => item !== currId) : [...prevState, currId]
         );
     };
-    console.log(multiple);
 
     return (
         <div className="wrapper min-h-screen bg-gradient-to-r from-teal-300 to-indigo-300 overflow-hidden">
