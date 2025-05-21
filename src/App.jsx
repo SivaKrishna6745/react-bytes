@@ -3,6 +3,7 @@ import Accordion from './components/accordion';
 import RandomColor from './components/random-color';
 import StarRating from './components/star-rating';
 import ImageSlider from './components/image-slider';
+import LoadMore from './components/load-more';
 
 const App = () => {
     return (
@@ -16,6 +17,8 @@ const App = () => {
             <StarRating noOfStars={10} />
             {/* image slider component */}
             <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} />
+            {/* load more component */}
+            <LoadMore />
         </div>
     );
 };
