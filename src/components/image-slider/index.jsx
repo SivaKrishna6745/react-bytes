@@ -10,7 +10,6 @@ const ImageSlider = ({ url, limit = 5 }) => {
         try {
             setIsLoading(true);
             const res = await fetch(`${getURL}?page=${PAGE}&limit=${limit}`).then((res) => res.json());
-            console.log(res);
             setImages(res);
         } catch (error) {
             console.error(error);
