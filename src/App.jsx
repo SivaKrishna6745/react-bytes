@@ -5,6 +5,7 @@ import StarRating from './components/star-rating';
 import ImageSlider from './components/image-slider';
 import LoadMore from './components/load-more';
 import TreeView from './components/tree-view';
+import menus from './components/tree-view/data';
 
 const App = () => {
     return (
@@ -21,7 +22,7 @@ const App = () => {
             {/* load more component */}
             <LoadMore />
             {/* tree view component */}
-            <TreeView />
+            <TreeView menus={menus} />
         </div>
     );
 };
