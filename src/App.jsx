@@ -31,7 +31,7 @@ const App = () => {
             {/* light dark mode component */}
             <LightDarkMode />
             {/* scroll indicator component */}
-            <ScrollIndicator />
+            <ScrollIndicator url="https://dummyjson.com/products?limit=100" />
         </div>
     );
 };
