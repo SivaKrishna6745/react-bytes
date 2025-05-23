@@ -9,7 +9,6 @@ const MenuItem = ({ item }) => {
             [label]: !displayCurrChildren[label],
         });
     };
-    console.log(displayCurrChildren);
 
     return (
         <li>
