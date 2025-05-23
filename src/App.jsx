@@ -8,6 +8,7 @@ import TreeView from './components/tree-view';
 import menus from './components/tree-view/data';
 import QRCodeGenerator from './components/qr-code-generator';
 import LightDarkMode from './components/light-dark-mode';
+import ScrollIndicator from './components/scroll-indicator';
 
 const App = () => {
     return (
@@ -29,6 +30,8 @@ const App = () => {
             <QRCodeGenerator />
             {/* light dark mode component */}
             <LightDarkMode />
+            {/* scroll indicator component */}
+            <ScrollIndicator />
         </div>
     );
 };
