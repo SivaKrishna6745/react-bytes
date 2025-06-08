@@ -13,23 +13,23 @@ import ScrollIndicator from './components/scroll-indicator';
 const App = () => {
     return (
         <div>
-            <h1 className="uppercase text-5xl text-center bg-purple-400 text-white p-5">React Bytes</h1>
+            {/* <h1 className="uppercase text-5xl text-center bg-purple-400 text-white p-5">React Bytes</h1> */}
             {/* accordion component */}
-            <Accordion />
+            {/* <Accordion /> */}
             {/* random color component */}
-            <RandomColor />
+            {/* <RandomColor /> */}
             {/* star rating component */}
-            <StarRating noOfStars={10} />
+            {/* <StarRating noOfStars={10} /> */}
             {/* image slider component */}
-            <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} />
+            {/* <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} /> */}
             {/* load more component */}
-            <LoadMore />
+            {/* <LoadMore /> */}
             {/* tree view component */}
-            <TreeView menus={menus} />
+            {/* <TreeView menus={menus} /> */}
             {/* qr code generator component */}
-            <QRCodeGenerator />
+            {/* <QRCodeGenerator /> */}
             {/* light dark mode component */}
-            <LightDarkMode />
+            {/* <LightDarkMode /> */}
             {/* scroll indicator component */}
             <ScrollIndicator url="https://dummyjson.com/products?limit=100" />
         </div>
