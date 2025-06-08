@@ -9,6 +9,7 @@ import menus from './components/tree-view/data';
 import QRCodeGenerator from './components/qr-code-generator';
 import LightDarkMode from './components/light-dark-mode';
 import ScrollIndicator from './components/scroll-indicator';
+import CustomTabs from './components/custom-tabs';
 
 const App = () => {
     return (
@@ -31,7 +32,9 @@ const App = () => {
             {/* light dark mode component */}
             {/* <LightDarkMode /> */}
             {/* scroll indicator component */}
-            <ScrollIndicator url="https://dummyjson.com/products?limit=100" />
+            {/* <ScrollIndicator url="https://dummyjson.com/products?limit=100" /> */}
+            {/* custom tabs component */}
+            <CustomTabs />
         </div>
     );
 };
