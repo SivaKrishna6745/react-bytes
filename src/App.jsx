@@ -11,6 +11,7 @@ import LightDarkMode from './components/light-dark-mode';
 import ScrollIndicator from './components/scroll-indicator';
 import TabTest from './components/custom-tabs/tab-test';
 import ModalPopup from './components/modal-popup';
+import GithubProfileFinder from './components/github-profile-finder';
 
 const App = () => {
     return (
@@ -37,7 +38,9 @@ const App = () => {
             {/* custom tabs component */}
             {/* <TabTest /> */}
             {/* modal popup component */}
-            <ModalPopup />
+            {/* <ModalPopup /> */}
+            {/* github profile finder component */}
+            <GithubProfileFinder />
         </div>
     );
 };
