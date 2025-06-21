@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Square = ({ value, onClick }) => {
     return (
         <div
-            className="w-20 h-20 bg-blue-300 border-1 border-gray-800 cursor-pointer flex items-center justify-center text-3xl"
+            className="w-20 h-20 bg-blue-300 cursor-pointer rounded-md flex items-center justify-center text-3xl"
             onClick={onClick}
         >
             {value}
@@ -63,30 +63,20 @@ const TicTacToe = () => {
     return (
         <div className="wrapper p-5 bg-green-800 flex flex-col items-center gap-8">
             <h2 className="text-4xl text-white">Tic-Tac-Toe Demo</h2>
-            <div className="flex">
-                <div className="row">
-                    <Square value={squares[0]} onClick={() => handleClick(0)} />
-                    <Square value={squares[1]} onClick={() => handleClick(1)} />
-                    <Square value={squares[2]} onClick={() => handleClick(2)} />
-                </div>
-                <div className="row">
-                    <Square value={squares[3]} onClick={() => handleClick(3)} />
-                    <Square value={squares[4]} onClick={() => handleClick(4)} />
-                    <Square value={squares[5]} onClick={() => handleClick(5)} />
-                </div>
-                <div className="row">
-                    <Square value={squares[6]} onClick={() => handleClick(6)} />
-                    <Square value={squares[7]} onClick={() => handleClick(7)} />
-                    <Square value={squares[8]} onClick={() => handleClick(8)} />
-                </div>
+            <div className="grid grid-cols-3 gap-2">
+                {squares.map((value, idx) => (
+                    <Square key={idx} value={value} onClick={() => handleClick(idx)} />
+                ))}
             </div>
             {squares.some((square) => square !== '') && <h3 className="text-xl text-white">{status}</h3>}
-            <button
-                className="text-lg bg-white/80 px-9 py-3 rounded-xl cursor-pointer hover:bg-white/50 active:scale-95"
-                onClick={handleRestart}
-            >
-                Restart
-            </button>
+            {(getWinner(squares) || squares.every((square) => square !== '')) && (
+                <button
+                    className="text-lg bg-white/80 px-9 py-3 rounded-xl cursor-pointer hover:bg-white/50 active:scale-95"
+                    onClick={handleRestart}
+                >
+                    Restart
+                </button>
+            )}
         </div>
     );
 };
