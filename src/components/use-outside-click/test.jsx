@@ -1,14 +1,21 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import useOutsideClick from '.';
 
 const UseOutsideClickTest = () => {
     const [showContent, setShowContent] = useState(false);
+    const ref = useRef(null);
+    useOutsideClick(ref, () => setShowContent(false));
     return (
-        <div className="wrapper p-5 bg-green-400 min-h-screen flex flex-col items-center">
+        <div
+            className={`wrapper p-5 min-h-screen flex flex-col items-center ${
+                showContent ? 'bg-black/90' : 'bg-green-400'
+            }`}
+        >
             <h2 className="text-4xl text-white mb-4">useOutsideClick Custom Hook Demo</h2>
             {showContent ? (
-                <div className="bg-white/50 p-8 rounded-xl text-center text-xl flex flex-col gap-4">
+                <div ref={ref} className="bg-white/50 p-8 rounded-xl text-center text-xl flex flex-col gap-4">
                     <h2 className="uppercase">Content Modal</h2>
-                    <p>Click ouside the modal to close it</p>
+                    <p>Click outside the modal to close it</p>
                 </div>
             ) : (
                 <button
