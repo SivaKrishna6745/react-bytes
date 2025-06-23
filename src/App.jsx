@@ -20,6 +20,7 @@ import UseFetchHookTest from './components/use-fetch/test';
 import UseOutsideClickTest from './components/use-outside-click/test';
 import UseWindowResizeTest from './components/use-window-resize/test';
 import ScrollToTopAndBottom from './components/scroll-to-top-and-bottom';
+import ScrollToSection from './components/scroll-to-section';
 
 const App = () => {
     return (
@@ -64,7 +65,9 @@ const App = () => {
             {/* use window resize custom hook component */}
             {/* <UseWindowResizeTest /> */}
             {/* scroll to top and bottom component */}
-            <ScrollToTopAndBottom />
+            {/* <ScrollToTopAndBottom /> */}
+            {/* scroll to section component */}
+            <ScrollToSection />
         </div>
     );
 };
